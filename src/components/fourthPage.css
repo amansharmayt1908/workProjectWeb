@@ -1,0 +1,265 @@
+/* General Container Styling */
+.fourth-page-container {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+/* Image Container Styling */
+.image-container {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-top: 3rem;
+}
+
+.image-container img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Initial Text Container Styling */
+.text-container {
+    position: absolute;
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.text-container span {
+    font-size: 1.2rem;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.text-container h3 {
+    font-weight: 300;
+    font-size: 2.5rem;
+    color: #333;
+    line-height: 1.4;
+    width: 850px;
+}
+
+/* Timeline Container Styling */
+.timeline-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+}
+
+/* Add the fixed timeline line */
+.timeline-fixed-line {
+    position: absolute;
+    top: 30%;
+    left: 0%;
+    right: 0%;
+    height: 4px;
+    background: rgba(246, 104, 122, 0.2);
+    width: 100%;
+    transform: translateY(-50%);
+}
+
+/* Moving dot on the timeline */
+.timeline-dot {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    width: 20px;
+    height: 20px;
+    background: #F6687A;
+    border-radius: 50%;
+    z-index: 2;
+    box-shadow: 0 0 0 6px rgba(246, 104, 122, 0.2);
+    transition: all 1s ease-in-out;
+    transform: translateY(-50%);
+}
+
+/* Dot positions */
+.timeline-dot.pos-0 { left: 20%; }
+.timeline-dot.pos-1 { left: 40%; }
+.timeline-dot.pos-2 { left: 60%; }
+.timeline-dot.pos-3 { left: 80%; }
+
+/* Week Container Styling */
+.week-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 800px;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+    transform: translateX(200%);
+    padding-top: 60px;
+}
+
+/* Position Classes */
+.week-container.center {
+    transform: translateX(0);
+    opacity: 1;
+    z-index: 3;
+}
+
+.week-container.left {
+    transform: translateX(-120%);
+    opacity: 1;
+    z-index: 2;
+}
+
+.week-container.far-left {
+    transform: translateX(-240%);
+    opacity: 1;
+    z-index: 1;
+}
+
+.week-container.right {
+    transform: translateX(240%);
+    opacity: 0;
+    z-index: 1;
+}
+
+.week-container.far-right {
+    transform: translateX(360%);
+    opacity: 0;
+    z-index: 1;
+}
+
+/* Text Styling */
+.week-container h4 {
+    color: #F6687A;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.5px;
+}
+
+.week-container p {
+    color: #333;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+/* Week Content Styling */
+.week-content {
+    text-align: center;
+    width: 100%;
+}
+
+/* Image Overlay Effect */
+.image-container.show img {
+    opacity: 0.08;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.image-container.show .text-container {
+    display: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .week-container {
+        width: 600px;
+    }
+
+    .week-content {
+        width: 500px;
+    }
+
+    .week-container h4 {
+        font-size: 1.8rem;
+    }
+
+    .week-container p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .week-container {
+        width: 90%;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 40px;
+    }
+
+    .week-content {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+
+    .week-container h4 {
+        font-size: 1.5rem;
+    }
+
+    .week-container p {
+        font-size: 1.1rem;
+    }
+
+    .week-container.left {
+        transform: translateX(-110%);
+    }
+
+    .week-container.far-left {
+        transform: translateX(-220%);
+    }
+
+    .text-container h3 {
+        font-size: 1.8rem;
+    }
+
+    .timeline-fixed-line {
+        left: 10%;
+        right: 10%;
+        width: 80%;
+    }
+
+    .timeline-dot {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+/* Footer Styling */
+.footer {
+    height: 30%;
+    width: 100%;
+    background: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-links, .footer-sub-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-links a, .footer-sub-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.9rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-links a:hover, .footer-sub-links a:hover {
+    color: #F6687A;
+}
+
