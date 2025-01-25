@@ -71,7 +71,7 @@ const FourthPage = () => {
                 <img src={image} alt='Background' />
                 {!showTimeline && (
                     <div className='text-container'>
-                        <div>
+                        <div className='textFourthPage'>
                             <span className='textHide'>YOUR TRANSFORMATION, ONE STEP AT A TIME</span>
                             <h3 className='textHide'>Fitness is a journey - every day brings</h3>
                             <h3 className='textHide'>you closer to the life you want</h3>

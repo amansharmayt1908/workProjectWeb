@@ -33,7 +33,7 @@ const Footer = () => {
             <a href="/custom">Custom</a>
           </div>
           
-          <div className="footer-nav-row">
+          <div className="footer-nav-row footer-nav-row-2">
             <a href="/faq">FAQ's</a>
             <a href="/returns">Returns</a>
             <a href="/ordering">Ordering</a>

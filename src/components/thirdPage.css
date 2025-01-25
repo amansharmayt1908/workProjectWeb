@@ -1,22 +1,23 @@
 .third-page-container {
-  padding: 6rem 6rem;
+  padding: 3rem 2rem;
   background-color: #ffffff;
 }
 
 .third-page-container .header {
   text-align: left;
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: flex-start;
+  gap: 2rem;
 }
 
 .third-page-container .header-text {
-  max-width: 60%;
+  max-width: 100%;
 }
 
 .third-page-container .header h1 {
-  font-size: 4.5rem;
+  font-size: 3rem;
   margin-bottom: 1.5rem;
   color: #333;
   font-weight: 600;
@@ -24,7 +25,7 @@
 }
 
 .third-page-container .header p {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: #666;
   margin: 0;
   line-height: 1.4;
@@ -34,14 +35,16 @@
   background-color: #00bfff;
   color: white;
   border: none;
-  padding: 1rem 2.5rem;
+  padding: 1rem 2rem;
   border-radius: 50px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
   white-space: nowrap;
   font-weight: 500;
   box-shadow: 0 4px 15px rgba(0, 191, 255, 0.3);
+  width: 100%;
+  text-align: center;
 }
 
 .third-page-container .view-more:hover {
@@ -52,87 +55,123 @@
 
 .third-page-container .products-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  max-width: 1600px;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
   margin: 0 auto;
 }
 
 .third-page-container .product-card {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  padding: 2rem;
+  align-items: center;
+  padding: 1.5rem;
   border-radius: 15px;
-  /* background-color: #f8f8f8; */
   transition: transform 0.3s;
   position: relative;
+  width: 100%;
 }
 
 .third-page-container .product-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-3px);
 }
 
 .third-page-container .product-image {
   width: 100%;
-  max-width: 400px;
+  max-width: 300px;
   height: auto;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   display: block;
-  margin: 0 auto 1.5rem auto;
 }
 
 .third-page-container .product-card h2 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: #333;
-  margin-bottom: 1rem;
-  align-self: flex-start;
+  margin-bottom: 0.8rem;
+  text-align: center;
+  width: 100%;
 }
 
 .third-page-container .learn-more {
   background-color: #00bfff;
   color: white;
   border: none;
-  padding: 0.8rem 2rem;
+  padding: 0.8rem 1.5rem;
   border-radius: 25px;
-  font-size: 1rem;
+  font-size: 0.9rem;
   cursor: pointer;
   transition: background-color 0.3s;
-  align-self: flex-start;
+  width: 100%;
+  text-align: center;
 }
 
 .third-page-container .learn-more:hover {
   background-color: #0099cc;
 }
 
-@media (max-width: 1200px) {
+@media (min-width: 768px) {
   .third-page-container {
     padding: 4rem 4rem;
   }
   
-  .third-page-container .header h1 {
-    font-size: 3.5rem;
+  .third-page-container .header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 6rem;
   }
 
   .third-page-container .header-text {
     max-width: 70%;
   }
 
+  .third-page-container .header h1 {
+    font-size: 3.5rem;
+  }
+  
+  .third-page-container .header p {
+    font-size: 1.5rem;
+  }
+
+  .third-page-container .view-more {
+    width: auto;
+  }
+  
   .third-page-container .products-container {
     grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .third-page-container .learn-more {
+    width: auto;
   }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 1200px) {
   .third-page-container {
-    padding: 3rem 2rem;
+    padding: 6rem 6rem;
+  }
+
+  .third-page-container .header-text {
+    max-width: 60%;
+  }
+
+  .third-page-container .header h1 {
+    font-size: 4.5rem;
+  }
+
+  .third-page-container .products-container {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1600px;
+  }
+}
+@media (max-width: 480px) {
+  .third-page-container {
+    padding: 2rem 1rem;
   }
 
   .third-page-container .header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 2rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
+    gap: 1rem;
   }
 
   .third-page-container .header-text {
@@ -140,14 +179,33 @@
   }
 
   .third-page-container .header h1 {
-    font-size: 3rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
   }
-  
+
   .third-page-container .header p {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
   }
-  
+
   .third-page-container .products-container {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 6rem;
+  }
+
+  .third-page-container .product-card {
+    padding: 1rem;
+  }
+
+  .third-page-container .product-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .third-page-container .view-more,
+  .third-page-container .learn-more {
+    width: 100%;
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
   }
 }
+

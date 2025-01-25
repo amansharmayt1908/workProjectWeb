@@ -1,5 +1,3 @@
-
-
 .main-container {
   min-height: 100vh;
   display: flex;
@@ -251,6 +249,192 @@
       top: 0;
       opacity: 0;
     }
+}
+
+@media screen and (max-width: 768px) {
+  .gradient-circle {
+    width: 300px;
+    height: 300px;
+    top: 15%;
+  }
+
+  @keyframes increaseSize {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.2);
+    }
+  }
+
+  .bottle-container {
+    width: 150px;
+    height: 150px;
+    bottom: 15%;
+  }
+
+  .bottle-cap {
+    width: 150px;
+    height: 150px;
+  }
+
+  .bottle-cap img {
+    width: 150px;
+  }
+
+  .bottle-base {
+    width: 200px;
+    top: 140px;
+  }
+
+  .bottle-base img {
+    height: 500px;
+    width: 200px;
+  }
+
+  .text {
+    width: 90%;
+    font-size: 1.2rem;
+    top: 45%;
+  }
+
+  .text h1 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+
+  .text span {
+    font-size: 0.9rem;
+    margin: 8px 0;
+  }
+
+  .button-container {
+    top: 400px;
+  }
+
+  .inquiry-button {
+    padding: 12px 30px;
+    font-size: 0.9rem;
+  }
+
+  @keyframes moveUp {
+    0% {
+      transform: translateY(0) scale(1);
+    }
+    50% {
+      transform: translateY(-160px) scale(1);
+    }
+    100% {
+      transform: translateY(617px) scale(0.7);
+    }
+  }
+
+  @keyframes moveDown {
+    0% {
+      transform: translateY(0) scale(1);
+    }
+    50% {
+      transform: translateY(70px) scale(1);
+    }
+    100% {
+      transform: translateY(550px) scale(0.7);
+    }
+  }
+
+  .leftbottle, .rightbottle {
+    width: 70px;
+    height: 70px;
+  }
+
+  .leftbottle {
+    left: 5%;
+  }
+
+  .rightbottle {
+    right: 5%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .gradient-circle {
+    width: 250px;
+    height: 250px;
+  }
+  
+
+  .bottle-container {
+    width: 120px;
+    height: 120px;
+  }
+
+  .bottle-cap {
+    width: 120px;
+    height: 120px;
+  }
+
+  .bottle-cap img {
+    width: 120px;
+  }
+
+  .bottle-base {
+    width: 160px;
+    top: 115px;
+  }
+
+  .bottle-base img {
+    height: 400px;
+    width: 160px;
+  }
+
+  .text {
+    width: 100vw;
+    font-size: 1rem;
+    top: 45%;
+  }
+
+  .text h1 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+
+  .text span {
+    font-size: 0.8rem;
+    margin: 6px 0;
+    line-height: 1.3;
+  }
+
+  .inquiry-button {
+    padding: 1rem 0.75rem;
+    font-size: 0.8rem;
+  }
+
+  .leftbottle, .rightbottle {
+    width: 50px;
+    height: 50px;
+  }
+
+  @keyframes moveUpButton {
+    0% {
+        opacity: 0;
+        transform: translateY(0px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-280px);
+        
+    }
+  }
+
+  @keyframes fadeInScale {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(0.9);
+    }
+  }
 }
 
 

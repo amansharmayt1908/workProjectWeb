@@ -169,97 +169,49 @@
     display: none;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 1200px) {
-    .week-container {
-        width: 600px;
+@media screen and (max-width: 480px) {
+    .fourth-page-container {
+        height: 100vh;
+        width: 100vw;
     }
 
-    .week-content {
-        width: 500px;
+    .image-container {
+        height: 60%;
     }
-
     .week-container h4 {
-        font-size: 1.8rem;
-    }
-
-    .week-container p {
         font-size: 1.2rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .week-container {
-        width: 90%;
-        flex-direction: column;
-        align-items: flex-start;
-        padding-top: 40px;
-    }
-
-    .week-content {
-        width: 100%;
-        margin-left: 0;
-        margin-top: 1rem;
-    }
-
-    .week-container h4 {
-        font-size: 1.5rem;
+        margin-bottom: 0.3rem;
     }
 
     .week-container p {
-        font-size: 1.1rem;
+        font-size: 1rem;
+        line-height: 1.4;
     }
-
-    .week-container.left {
-        transform: translateX(-110%);
+    .text-container {
+        width: 100%;
+        padding: 1rem;
     }
-
-    .week-container.far-left {
-        transform: translateX(-220%);
-    }
-
     .text-container h3 {
-        font-size: 1.8rem;
+        width: 100%;
+        color: black;
+        font-size: 1rem;
+        line-height: 1.4;
     }
-
-    .timeline-fixed-line {
-        left: 10%;
-        right: 10%;
-        width: 80%;
+    .text-container span {
+        font-size: 0.8rem;
     }
-
-    .timeline-dot {
-        width: 16px;
-        height: 16px;
+    .week-content {
+        /* width: 100vw; */
+        padding: 0.5rem;
     }
-}
-
-/* Footer Styling */
-.footer {
-    height: 30%;
-    width: 100%;
-    background: #000;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-}
-
-.footer-links, .footer-sub-links {
-    display: flex;
-    gap: 2rem;
-}
-
-.footer-links a, .footer-sub-links a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 0.9rem;
-    transition: color 0.3s ease-in-out;
-}
-
-.footer-links a:hover, .footer-sub-links a:hover {
-    color: #F6687A;
+    .week-container h4 {
+        width: 200vw;
+        font-size: 0.8rem;
+    }
+    .week-container p {
+        width: 80vw;
+        margin-left: 60vw;
+        font-size: 0.6rem;
+    }
 }
 

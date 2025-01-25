@@ -1,5 +1,6 @@
 .header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 4rem;
@@ -40,4 +41,37 @@
 
 .inquiry-btn:hover {
   background: #00a0b4;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 2rem;
+  }
+}
+@media (max-width: 480px) {
+  .header {
+    padding: 1rem 1rem;
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    gap: 0.7rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo img {
+    height: 1rem;
+  }
+  .nav-links {
+    gap: 0.5rem;
+    margin-top: 0.2rem;
+  }
+  .nav-links a {
+    font-size: 0.4rem;
+  }
+  .inquiry-btn {
+    padding: 0.2rem 0.5rem;
+    font-size: 0.5rem;
+  }
 }
